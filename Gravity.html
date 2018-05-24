@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  background-color: grey; 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: BLUE;
+}
+
+.header h2 {
+  text-align: center;
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>DOES GRAVITY GRAVITATE ?</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  
+  <p>This has come up in enough threads now that I feel the need to give my take on it in a convenient central location, so I can just link to it instead of having to restate it again and again. ;) Short answer: mu. (The terms of the question are not well-defined, so it doesn't have a well-defined answer.) Somewhat less short answer: Yes and no. (It depends on how you define the terms "gravity" and "gravitate". There are possible definitions that lead to each answer.) Ok, enough fun. ;) Let's look into this in more detail. We'll start with the "no" answer. The fundamental equation of GR is the Einstein Field Equation, which looks like this: Conceptually, what this equation says is " "spacetime curvature = constant * stress-energy". </p>
+  <p>So the LHS of the equation is "gravity", conceptually, and the RHS is the "source" that produces it. The key point here is that the RHS does not include any stress-energy due to gravity itself. That's because there isn't any; the "source" in the EFE does not include any "energy stored in the gravitational field", because there is no coordinate-free way of defining any such energy, and the EFE is a coordinate-free, tensor equation. But how did we come up with this equation, you ask? There are a number of ways to derive it (Misner, Thorne, and Wheeler list six of them), but the most direct is the way first derived by David Hilbert in 1915, at the same time that Einstein was completing his derivation (by a different route). </p>
+  <p> By the principle of least action, the variation of the action with respect to the metric must be zero, and this gives an "equation of motion" for the physical system described by the action. Varying SGSG with respect to the metric leads directly to the vacuum Einstein Field Equation (i.e., the EFE with the RHS equal to zero). So if gravity is the only "field" present (we'll come back to what "field" means in a bit), the Einstein tensor (the LHS of the EFE) completely describes the dynamics of the system.</p>
+  
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+</body>
+</html> 

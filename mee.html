@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  background-color: grey; 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: BLUE;
+}
+
+.header h2 {
+  text-align: center;
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>What is the mass energy Equivalence?</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  
+  <p>In physics, mass energy equivalence states that anything having mass has an equivalent amount of energy and vice versa, with these fundamental quantities directly relating to one another by Albert Einstein's famous formula:
+
+E = m c<sup> 2 </sup>.</p>
+<p>
+This formula states that the equivalent energy (E) can be calculated as the mass (m) multiplied by the speed of light (c = about 3×108 m/s) squared. Similarly, anything having energy exhibits a corresponding mass m given by its energy E divided by the speed of light squared c². </p>
+<p>Because the speed of light is a very large number in everyday units, the formula implies that even an everyday object at rest with a modest amount of mass has a very large amount of energy intrinsically. Chemical, nuclear, and other energy transformations may cause a system to lose some of its energy content (and thus some corresponding mass), releasing it as the radiant energy of light or as thermal energy for example.</p>
+<p>
+Mass energy equivalence arose originally from special relativity as a paradox described by Henri Poincaré.[2] Einstein proposed it on 21 November 1905, in the paper.Does the inertia of a body depend upon its energy-content ?, one of his Annus Mirabilis (Miraculous Year) papers.[3] Einstein was the first to propose that the equivalence of mass and energy is a general principle and a consequence of the symmetries of space and time.</p>
+<p>
+A consequence of the mass energy equivalence is that if a body is stationary, it still has some internal or intrinsic energy, called its rest energy, corresponding to its rest mass. When the body is in motion, its total energy is greater than its rest energy, and, equivalently, its total mass (also called relativistic mass in this context) is greater than its rest mass.</p><p> This rest mass is also called the intrinsic or invariant mass because it remains the same regardless of this motion, even for the extreme speeds or gravity considered in special and general relativity.
+The mass energy formula also serves to convert units of mass to units of energy (and vice versa), no matter what system of measurement units is used.</p>
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+</body>
+</html> 

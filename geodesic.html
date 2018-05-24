@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  background-color: grey; 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: BLUE;
+}
+
+.header h2 {
+  text-align: center;
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>What is geodesic deviation?</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  
+  <p>In general relativity, geodesic deviation describes the tendency of objects to approach or recede from one another while moving under the influence of a spatially varying gravitational field. Put another way, if two objects are set in motion along two initially parallel trajectories, the presence of a tidal gravitational force will cause the trajectories to bend towards or away from each other, producing a relative acceleration between the objects.</p>
+  <p>
+Mathematically, the tidal force in general relativity is described by the Riemann curvature tensor,[1] and the trajectory of an object solely under the influence of gravity is called a geodesic. The geodesic deviation equation relates the Riemann curvature tensor to the relative acceleration of two neighboring geodesics. In differential geometry, the geodesic deviation equation is more commonly known as the Jacobi equation.</p>
+<p>
+The geodesic deviation equation can be derived from the second variation of the point particle Lagrangian along geodesics, or from the first variation of a combined Lagrangian. The Lagrangian approach has two advantages. First it allows various formal approaches of quantization to be applied to the geodesic deviation system. Second it allows deviation to be formulated for much more general objects than geodesics (any dynamical system which has a one spacetime indexed momentum appears to have a corresponding generalization of geodesic deviation).</p>
+<p>
+The connection between geodesic deviation and tidal acceleration can be seen more explicitly by examining geodesic deviation in the weak-field limit, where the metric is approximately Minkowski, and the velocities of test particles are assumed to be much less than c. Then the tangent vector Tμ is approximately (1, 0, 0, 0); i.e., only the timelike component is nonzero.</p>
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+</body>
+</html> 

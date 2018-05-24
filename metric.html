@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  background-color: grey; 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: BLUE;
+}
+
+.header h2 {
+  text-align: center;
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>What is metric tensor?</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  
+  <p>In the mathematical field of differential geometry, a metric tensor is a type of function which takes as input a pair of tangent vectors v and w at a point of a surface (or higher dimensional differentiable manifold) and produces a real number scalar g(v, w) in a way that generalizes many of the familiar properties of the dot product of vectors in Euclidean space.</p><p> In the same way as a dot product, metric tensors are used to define the length of and angle between tangent vectors. Through integration, the metric tensor allows one to define and compute the length of curves on the manifold.</p>
+  <p>
+A metric tensor is called positive definite if it assigns a positive value g(v, v) > 0 to every nonzero vector v. A manifold equipped with a positive definite metric tensor is known as a Riemannian manifold. On a Riemannian manifold, the curve connecting two points that (locally) has the smallest length is called a geodesic, and its length is the distance that a passenger in the manifold needs to traverse to go from one point to the other.</p>
+<p> Equipped with this notion of length, a Riemannian manifold is a metric space, meaning that it has a distance function d(p, q) whose value at a pair of points p and q is the distance from p to q. Conversely, the metric tensor itself is the derivative of the distance function (taken in a suitable manner). Thus the metric tensor gives the infinitesimal distance on the manifold.</p>
+<p>
+While the notion of a metric tensor was known in some sense to mathematicians such as Carl Gauss from the early 19th century, it was not until the early 20th century that its properties as a tensor were understood by, in particular, Gregorio Ricci-Curbastro and Tullio Levi-Civita, who first codified the notion of a tensor. The metric tensor is an example of a tensor field.</p>
+<p>
+The components of a metric tensor in a coordinate basis take on the form of a symmetric matrix whose entries transform covariantly under changes to the coordinate system. Thus a metric tensor is a covariant symmetric tensor. From the coordinate-independent point of view, a metric tensor is defined to be a nondegenerate symmetric bilinear form on each tangent space that varies smoothly from point to point.</p>
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+</body>
+</html> 

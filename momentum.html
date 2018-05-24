@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  background-color: grey; 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: BLUE;
+}
+
+.header h2 {
+  text-align: center;
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>How can light have momentum if it has zero mass?</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  
+  <p>Classically (according to Newton) kinetic energy is given by  and momentum is given by , where m is mass and v is velocity. But if you plug in the mass and velocity for light you get. But that is no good. If light did not carry energy, it would not be able to heat stuff up.</p>
+  <p>
+The difficulty comes from the fact that Newton<sup>'</sup>s laws paint an incomplete (and ultimately incorrect) picture.  When relativity came along it was revealed that there is a fundamental difference in the physics of the massive and the massless.  Relativity makes the (experimentally backed) assumptions that: it does not matter whether, or how fast, you are moving (all physical laws stay the same) and  the speed of light is invariant (always the same to everyone).
+</p>
+<p>
+Any object with mass travels slower than light and so may as well be stationary.
+Anything with zero mass always travels at the speed of light.  But since the speed-of-light is always the speed-of-light to everyone there is no way for these objects to ever be stationary (unlike massive stuff). It is not important here, but things (like light) that travel at the speed of light never experience the passage of time. Is it not that awesome?</p>
+<p>
+The point is: light and ordinary matter are very different, and the laws that govern them are just as different.</p>
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+</body>
+</html> 

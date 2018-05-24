@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-size: 28px;
+  background-color: grey; 
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: BLUE;
+}
+
+.header h2 {
+  text-align: center;
+  color: white;
+}
+
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #ccc;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #4caf50;
+  width: 0%;
+}
+
+.content {
+  padding: 100px 0;
+  margin: 50px auto 0 auto;
+  width: 80%;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>What is the Lorentz Transformation ?</h2>
+  <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+</div>
+
+<div class="content">
+  
+  <p>In physics, the Lorentz transformations (or transformation) are coordinate transformations between two coordinate frames that move at constant velocity relative to each other. The transformations are named after the Dutch physicist Hendrik Lorentz.</p>
+  <p>
+Frames of reference can be divided into two groups: inertial (relative motion with constant velocity) and non-inertial (accelerating in curved paths, rotational motion with constant angular velocity, etc.). The term "Lorentz transformations" only refers to transformations between inertial frames, usually in the context of special relativity.</p>
+<p>
+In each reference frame, an observer can use a local coordinate system (most exclusively Cartesian coordinates in this context) to measure lengths, and a clock to measure time intervals. An observer is a real or imaginary entity that can take measurements, say humans, or any other living organism—or even robots and computers. An event is something that happens at a point in space at an instant of time, or more formally a point in spacetime. The transformations connect the space and time coordinates of an event as measured by an observer in each frame.[nb 1]
+They supersede the Galilean transformation of Newtonian physics, which assumes an absolute space and time (see Galilean relativity). The Galilean transformation is a good approximation only at relative speeds much smaller than the speed of light. Lorentz transformations have a number of unintuitive features that do not appear in Galilean transformations. For example, they reflect the fact that observers moving at different velocities may measure different distances, elapsed times, and even different orderings of events, but always such that the speed of light is the same in all inertial reference frames. The invariance of light speed is one of the postulates of special relativity.</p>
+<p>
+Historically, the transformations were the result of attempts by Lorentz and others to explain how the speed of light was observed to be independent of the reference frame, and to understand the symmetries of the laws of electromagnetism. The Lorentz transformation is in accordance with special relativity, but was derived before special relativity.</p>
+<p>
+The Lorentz transformation is a linear transformation. It may include a rotation of space; a rotation-free Lorentz transformation is called a Lorentz boost. In Minkowski space, the mathematical model of spacetime in special relativity, the Lorentz transformations preserve the spacetime interval between any two events. This property is the defining property of a Lorentz transformation. They describe only the transformations in which the spacetime event at the origin is left fixed. They can be considered as a hyperbolic rotation of Minkowski space. The more general set of transformations that also includes translations is known as the Poincaré group.</p>
+</div>
+
+<script>
+// When the user scrolls the page, execute myFunction 
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>
+
+</body>
+</html> 
